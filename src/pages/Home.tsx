@@ -14,10 +14,12 @@ import { Button } from '../components/Button'
 import '../styles/auth.scss'
 
 export function Home() {
+  
+    
     const history = useHistory()
     const { user, signInWithGoogle } = useAuth()
     const [roomCode, setRoomCode] = useState('')
-
+    console.log(user);
     async function handleCreateRoom() {
         if (!user) {
             await signInWithGoogle()
